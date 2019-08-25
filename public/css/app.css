@@ -1,0 +1,23 @@
+.cpl-wrapper {padding: 20px 0;}
+
+.cpl-wrapper.bg-gradient {background: linear-gradient(#ddd,#eee,#fff,#fff); margin: 0}
+.cpl-wrapper.bg-gradient .jumbotron {background: none; padding: 0; margin: 0;}
+
+.navbar {margin-bottom: 0}
+.navbar .separator {height: 50px; margin: 0 10px; border-right: 1px solid #3c3c3c; border-left: 1px solid #272727;}
+
+body {padding-top: 50px;}
+
+@media (max-width: 767px) {
+  body {padding-top: 0}
+  .navbar {position: relative}
+  .navbar-brand {float: none}
+  .navbar .separator {display: none}
+}
+
+
+/* .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {width: 320px} */
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {color: #9d9d9d}
+
+.navbar-brand .navbar-icon {width: 48px; float: left; margin-right: 8px; margin-top: -13px}

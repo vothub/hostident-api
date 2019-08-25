@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Cyberpolice Lookup</title>
+  <link href="/public/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="/public/css/app.css" rel="stylesheet" type="text/css">
+
+  <script src="/public/js/jquery.min.js"></script>
+  <script src="/public/js/bootstrap.min.js"></script>
+  <script src="/public/js/main.js"></script>
+
+  <link href="/public/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="/public/css/animate.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li>
+          <span class="navbar-brand">
+            <img class="navbar-icon" src="/public/img/cpl-icon-64.png" alt="Cyberpolice Lookup logo" />
+            Cyberpolice Lookup
+          </span>
+        </li>
+
+        <li class="separator"></li>
+
+        <li><a href="/">New lookup</a></li>
+        <li><a href="/readme">Readme</a></li>
+
+        <li class="separator"></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- <br /><br /><br /> -->
+
+  <div class="cpl-wrapper {{#if ui.wrapperClass}}{{ui.wrapperClass}}{{/if}}">
+    <div class="container-fluid">
+      {{{body}}}
+    </div>
+  </div>
+
+</body>
+</html>
