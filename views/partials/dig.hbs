@@ -20,7 +20,6 @@
         </thead>
         <tbody>
           {{#each data}}
-          {{#each this}}
           <tr>
             <td>{{this.type}}</td>
             <td>{{this.name}}</td>
@@ -28,12 +27,11 @@
             <td>{{this.address}}</td>
           </tr>
           {{/each}}
-          {{/each}}
         </tbody>
       </table>
     {{/unless}}
 
-    <pre style="">{{json data}}</pre>
+    <pre class="pre-scrollable">{{json data}}</pre>
 
   </div>
 </div>
