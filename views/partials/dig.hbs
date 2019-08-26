@@ -1,0 +1,39 @@
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">dig</h3>
+  </div>
+  <div class="panel-body">
+
+    <strong>DNS Records</strong>
+
+    {{#unless data}}
+      <p>No DNS records found.</p>
+    {{else}}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>TTL</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each data}}
+          {{#each this}}
+          <tr>
+            <td>{{this.type}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.ttl}}</td>
+            <td>{{this.address}}</td>
+          </tr>
+          {{/each}}
+          {{/each}}
+        </tbody>
+      </table>
+    {{/unless}}
+
+    <pre style="">{{json data}}</pre>
+
+  </div>
+</div>
