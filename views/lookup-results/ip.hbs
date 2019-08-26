@@ -1,15 +1,18 @@
-<h1>Results: Lookup by IP</h1>
+<div class="container">
+  <h1>Results: Lookup by IP</h1>
 
-<strong>{{query.ip}}</strong>
+  <strong>{{query.ip}}</strong>
 
-<br /><br />
+  <br /><br />
 
-{{> geoip data=result.geoip}}
+  {{> geoip data=result.geoip}}
 
-{{> nmap data=result.nmap}}
+  {{> nmap data=result.nmap}}
 
-{{!> traceroute data=result.traceroute}}
+  {{!> traceroute data=result.traceroute}}
 
-{{> whois data=result.whois}}
+  {{> whois data=result.whois}}
 
-{{> curl data=result.curl}}
+  {{> curl data=result.curl}}
+
+</div>

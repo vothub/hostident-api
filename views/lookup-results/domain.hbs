@@ -1,15 +1,19 @@
-<h1>Results: Lookup by domain</h1>
+<div class="container">
 
-<strong>{{query.domain}}</strong>
+  <h1>Results: Lookup by domain</h1>
 
-<br /><br />
+  <strong>{{query.domain}}</strong>
 
-{{!> geoip data=result.geoip}}
+  <br /><br />
 
-{{> whois data=result.whois}}
+  {{!> geoip data=result.geoip}}
 
-{{> dig data=result.dig}}
+  {{> whois data=result.whois}}
 
-{{> nmap data=result.nmap}}
+  {{> dig data=result.dig}}
 
-{{> curl data=result.curl}}
+  {{> nmap data=result.nmap}}
+
+  {{> curl data=result.curl}}
+
+</div>

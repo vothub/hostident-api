@@ -1,9 +1,11 @@
-<h1>Results: Lookup by URL</h1>
+<div class="container">
 
-<strong>{{query.url}}</strong>
+  <h1>Report: {{query.url}} (Lookup by URL)</h1>
 
-<br /><br />
+  <br /><br />
 
-{{!> geoip data=result.geoip}}
+  {{!> geoip data=result.geoip}}
 
-{{> curl data=result.curl}}
+  {{> curl data=result.curl}}
+
+</div>
