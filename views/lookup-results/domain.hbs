@@ -4,14 +4,12 @@
 
 <br /><br />
 
-{{> geoip data=result.geoip}}
+{{!> geoip data=result.geoip}}
 
-{{!> nmap data=result.nmap}}
-
-{{!> traceroute data=result.traceroute}}
+{{> whois data=result.whois}}
 
 {{> dig data=result.dig}}
 
-{{> whois data=result.whois}}
+{{> nmap data=result.nmap}}
 
 {{> curl data=result.curl}}
