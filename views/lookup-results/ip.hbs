@@ -4,6 +4,12 @@
 
 <br /><br />
 
-{{> geoip }}
+{{> geoip data=result.geoip}}
 
-{{> portscan }}
+{{> nmap data=result.nmap}}
+
+{{!> traceroute data=result.traceroute}}
+
+{{> whois data=result.whois}}
+
+{{> curl data=result.curl}}

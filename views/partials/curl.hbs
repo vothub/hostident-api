@@ -1,0 +1,68 @@
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">CURL</h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      <strong>Error:</strong>
+      {{#if data.error}}
+        <pre>{{data.error}}</pre>
+      {{else}}
+        <i>None</i>
+      {{/if}}
+    </p>
+
+    <p>
+      <strong>Status:</strong>
+      {{#if data.status}}
+        {{data.status}}
+      {{else}}
+        <i>Unknown</i>
+      {{/if}}
+    </p>
+
+    <p>
+      <strong>Final URL:</strong>
+      {{#if data.finalUrl}}
+        {{data.finalUrl}}
+      {{else}}
+        <i>Unknown</i>
+      {{/if}}
+    </p>
+
+    <strong>Headers</strong>
+
+    {{#unless data.headers}}
+      <p>No headers found.</p>
+    {{else}}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Header</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each data.headers}}
+          <tr>
+            <td>{{@key}}</td>
+            <td>{{this}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    {{/unless}}
+
+    <p>
+      <strong>Response:</strong>
+      {{#if data.body}}
+        <pre>{{data.body}}</pre>
+      {{else}}
+        <i>Unknown</i>
+      {{/if}}
+    </p>
+
+    <!-- <pre style="">{{json data}}</pre> -->
+
+  </div>
+</div>

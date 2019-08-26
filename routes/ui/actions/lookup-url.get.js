@@ -5,5 +5,5 @@ module.exports = (req, res) => {
 
   console.log('lookupUrl', lookupUrl);
 
-  return res.render('lookup-results/domain', { query: { url: lookupUrl }, result: {} });
+  return res.render('lookup-results/url', { query: { url: lookupUrl }, result: {} });
 };

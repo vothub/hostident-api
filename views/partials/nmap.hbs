@@ -1,0 +1,62 @@
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">Port scan</h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      <strong>Hostname:</strong>
+      {{#if data.hostname}}
+        {{data.hostname}}
+      {{else}}
+        <i>Unknown</i>
+      {{/if}}
+    </p>
+
+    <p>
+      <strong>MAC:</strong>
+      {{#if data.mac}}
+        {{data.mac}}
+      {{else}}
+        <i>Unknown</i>
+      {{/if}}
+    </p>
+
+    <p>
+      <strong>OS:</strong>
+      {{#if data.osNmap}}
+        {{data.osNmap}}
+      {{else}}
+        <i>Unknown</i>
+      {{/if}}
+    </p>
+
+    <strong>Open ports</strong>
+
+    {{#unless data.openPorts}}
+      <p>No open ports found.</p>
+    {{else}}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Port</th>
+            <th>Protocol</th>
+            <th>Service</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each data.openPorts}}
+          <tr>
+            <td>{{this.port}}</td>
+            <td>{{this.protocol}}</td>
+            <td>{{this.service}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    {{/unless}}
+
+
+    <pre style="display: none">{{json data}}</pre>
+
+  </div>
+</div>

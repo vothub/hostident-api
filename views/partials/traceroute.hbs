@@ -1,0 +1,33 @@
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">Traceroute</h3>
+  </div>
+  <div class="panel-body">
+    {{#unless data.hops}}
+      <p>No traceroute found.</p>
+    {{else}}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Host</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each data.hops}}
+            {{#each this}}
+              <tr>
+                <td>{{@key}}</td>
+                <td>{{this}}</td>
+              </tr>
+            {{/each}}
+          {{/each}}
+        </tbody>
+      </table>
+    {{/unless}}
+
+
+    <pre style="display: none">{{json data}}</pre>
+
+  </div>
+</div>

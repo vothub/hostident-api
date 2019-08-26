@@ -1,0 +1,13 @@
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">WHOIS</h3>
+  </div>
+  <div class="panel-body">
+
+    {{#each data}}
+    <h5>{{this.server}}</h5>
+    <pre>{{this.data}}</pre>
+    {{/each}}
+
+  </div>
+</div>
