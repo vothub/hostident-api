@@ -1,13 +1,12 @@
 const _ = require('lodash');
-
-const urlLib = require('../../../lib/url');
+const CPLLib = require('@cyberpolice/lookup-lib');
 
 module.exports = (req, res) => {
   const lookupUrl = _.get(req, 'query.url');
 
   console.log('lookupUrl', lookupUrl);
 
-  return urlLib.lookup(lookupUrl, (urlErr, urlResult) => {
+  return CPLLib.url.lookup(lookupUrl, (urlErr, urlResult) => {
     return res.render('lookup-results/url', { query: { url: lookupUrl }, result: urlResult });
   });
 };

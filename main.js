@@ -42,11 +42,15 @@ function startApp() {
   /* Routes */
   /* eslint-disable global-require */
   // UI Routes
-  app.get('/', (req, res) => { return res.render('home'); });
+  app.get('/', (req, res) => { return res.render('home', {
+    you: { ip: req.ip, headers: req.headers }
+  });
+  });
   app.get('/readme', (req, res) => { return res.render('readme'); });
 
   // UI Actions Routes
   app.use('/actions', bodyFormParser);
+  app.get('/actions/lookup/auto', require('./routes/ui/actions/lookup-auto.get'));
   app.get('/actions/lookup/ip', require('./routes/ui/actions/lookup-ip.get'));
   app.get('/actions/lookup/domain', require('./routes/ui/actions/lookup-domain.get'));
   app.get('/actions/lookup/url', require('./routes/ui/actions/lookup-url.get'));

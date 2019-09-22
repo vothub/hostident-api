@@ -1,0 +1,19 @@
+<div class="container">
+
+  <h1>Results: Auto lookup</h1>
+
+  <strong>{{query.target}}</strong>
+
+  <br /><br />
+
+  {{> geoip data=result.geoip}}
+
+  {{> whois data=result.whois}}
+
+  {{!> dig data=result.dig}}
+
+  {{!> nmap data=result.nmap}}
+
+  {{> curl data=result.curl}}
+
+</div>

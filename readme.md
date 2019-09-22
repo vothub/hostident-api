@@ -1,3 +1,3 @@
-# Cyberpolice Lookup
+# Cyberpolice Lookup Web
 
-Simple UI to look up suspicious IPs and domains.
+Simple Web UI to look up suspicious IPs and domains.
