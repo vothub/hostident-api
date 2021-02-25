@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const CPLLib = require('@cyberpolice/lookup-lib');
+const CPLLib = require('../../../lib');
 
 module.exports = (req, res) => {
   const lookupIp = _.get(req, 'query.ip');

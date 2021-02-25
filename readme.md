@@ -1,3 +1,3 @@
-# Cyberpolice Lookup Web
+# HostIdent API
 
-Simple Web UI to look up suspicious IPs and domains.
+Simple Web API / UI to look up suspicious IPs and domains.

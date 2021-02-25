@@ -57,7 +57,7 @@ function startApp() {
   /* eslint-enable global-require */
 
   app.listen(appPort, () => {
-    console.log(`Cyberpolice Lookup listening on port ${appPort}`);
+    console.log(`HostIdent API listening on port ${appPort}`);
   });
 
   return app;
